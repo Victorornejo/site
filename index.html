@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vick's Video Games & Toys LLC | Professional Wholesale Distribution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --houston-blue: #0056b3;
+            --accent-cyan: #00d4ff;
+            --deep-slate: #12141d;
+            --panel-bg: #1c1f2e;
+            --text-gray: #94a3b8;
+            --white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-gray); background: var(--deep-slate); overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Syncopate', sans-serif; text-transform: uppercase; color: var(--white); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+        /* 1. HERO SCREEN (LOGISTICS EXCELLENCE) */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            background: linear-gradient(rgba(18, 20, 29, 0.85), rgba(18, 20, 29, 0.7)), 
+                        url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+            border-bottom: 4px solid var(--houston-blue);
+        }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 0.9; margin-bottom: 25px; letter-spacing: -2px; }
+        .hero p { font-size: 1.2rem; letter-spacing: 5px; font-weight: 300; text-transform: uppercase; color: var(--accent-cyan); border-left: 3px solid var(--houston-blue); padding-left: 20px; }
+
+        /* SECTION UTILS */
+        section { padding: 120px 0; }
+        .tagline { color: var(--houston-blue); font-weight: 600; font-size: 0.85rem; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+        .section-title { font-size: 3rem; margin-bottom: 50px; color: var(--white); }
+
+        /* 2. ABOUT US (THE HOUSTON LOGIC) */
+        .about-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+        .about-text p { font-size: 1.15rem; color: var(--text-gray); margin-bottom: 25px; font-weight: 300; }
+
+        /* 3. SERVICES (DURABLE GOODS CHANNELS) */
+        .services { background: #0c0e14; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .service-card { padding: 60px; background: var(--panel-bg); border: 1px solid #2a2e3f; transition: var(--transition); }
+        .service-card:hover { transform: translateY(-12px); border-color: var(--houston-blue); box-shadow: 0 20px 40px -20px rgba(0, 86, 179, 0.4); }
+        .service-card h3 { margin-bottom: 20px; font-size: 1.6rem; color: var(--white); }
+
+        /* 4. STRATEGIC EDGE (WHY US) */
+        .edge-block { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+        .edge-item h3 { font-size: 1.4rem; margin-bottom: 20px; color: var(--accent-cyan); display: flex; align-items: center; gap: 15px; }
+        .edge-item h3::before { content: "0x"; font-size: 0.8rem; color: var(--houston-blue); }
+
+        /* 5. LOGISTICS PIPELINE (PROCESS) */
+        .process { background: var(--deep-slate); border-top: 1px solid #2a2e3f; }
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+        .process-step { position: relative; }
+        .step-num { font-size: 5rem; font-family: 'Syncopate'; color: rgba(0, 86, 179, 0.05); position: absolute; top: -50px; left: 0; }
+        .process-step h3 { margin-bottom: 20px; position: relative; z-index: 1; color: var(--white); }
+
+        /* 6. ENGAGEMENT (CONTACT FORM) */
+        .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; }
+        .form-group { margin-bottom: 30px; }
+        .form-group label { display: block; font-weight: 700; font-size: 0.8rem; margin-bottom: 12px; text-transform: uppercase; color: var(--houston-blue); letter-spacing: 2px; }
+        .form-control { width: 100%; padding: 20px; background: var(--panel-bg); border: 1px solid #2a2e3f; color: var(--white); font-family: inherit; transition: var(--transition); border-radius: 0; }
+        .form-control:focus { border-color: var(--houston-blue); outline: none; }
+        .submit-btn { padding: 25px 60px; background: var(--houston-blue); color: var(--white); border: none; font-family: 'Syncopate'; font-weight: 700; cursor: pointer; transition: var(--transition); width: 100%; text-transform: uppercase; letter-spacing: 3px; }
+        .submit-btn:hover { background: var(--white); color: var(--deep-slate); }
+
+        /* 7. GLOBAL FOOTER (SITE DATA) */
+        footer { padding: 100px 0 50px; background: #050507; color: #4b5563; border-top: 1px solid #2a2e3f; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; }
+        .footer-brand h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 20px; }
+        .footer-info strong { color: var(--houston-blue); text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 6px; letter-spacing: 2px; }
+        .copyright { margin-top: 80px; text-align: center; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 40px; letter-spacing: 2px; }
+
+        @media (max-width: 992px) {
+            .about-wrap, .process-grid, .edge-block, .contact-wrap, .footer-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Elite Durable Goods Trade</h1>
+            <p>Vick's Video Games & Toys LLC | National Wholesale Logistics</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="about-wrap">
+                <div class="about-text">
+                    <span class="tagline">The Enterprise</span>
+                    <h2 class="section-title">Strategic Wholesaling in Houston, Texas</h2>
+                    <p>Based in the commercial logistical hub of Houston, Vick's Video Games & Toys LLC is a premier leader in the Miscellaneous Durable Goods Merchant Wholesalers sector. We specialize in high-integrity supply chain management for the recreational technology industry.</p>
+                    <p>Under the stewardship of Key Principal Victor Cornejo, we operate as a critical trade link, bridging the gap between global manufacturing and regional retail markets. Our headquarters at 9010 Durham Manor Ln provides the logistical anchor for domestic distribution.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=1000" alt="Houston Distribution Center" style="width:100%; border: 1px solid var(--houston-blue); padding: 15px; background: var(--panel-bg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <span class="tagline">Core Capabilities</span>
+            <h2 class="section-title">Wholesale Infrastructure</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Video Game Distribution</h3>
+                    <p>Managing high-volume merchant wholesaling of video games and related interactive software within the durable goods sector.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Durable Goods Logistics</h3>
+                    <p>Operating within the broader Wholesale Trade sector, ensuring technical accuracy and punctuality in domestic product staging and fulfillment.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Retail Supply Channels</h3>
+                    <p>Linking specialized recreational durable goods with high-demand retail markets through robust merchant wholesaler networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <span class="tagline">The Advantage</span>
+            <h2 class="section-title">Why Partners Choose Vick's</h2>
+            <div class="edge-block">
+                <div class="edge-item">
+                    <h3>Houston Strategic Hub</h3>
+                    <p>Our location at 9010 Durham Manor Ln provides a critical North Texas logistical anchor for domestic trade and distribution.</p>
+                </div>
+                <div class="edge-item">
+                    <h3>Cornejo-Led Integrity</h3>
+                    <p>Key Principal Victor Cornejo personally oversees our merchant standards, ensuring executive-level accountability for every wholesale contract.</p>
+                </div>
+                <div class="edge-item">
+                    <h3>Trade Sector Mastery</h3>
+                    <p>We leverage cross-industry expertise in merchant wholesaling to deliver high-performance supply chain solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <span class="tagline">The Pipeline</span>
+            <h2 class="section-title">Wholesale Protocol</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h3>Technical Audit</h3>
+                    <p>We analyze supply chain constraints to build a solid foundation for regional distribution and trade.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h3>Inventory Staging</h3>
+                    <p>Our team utilizes specialized merchant management to ensure stock availability across all gaming and toy lines.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h3>Fulfillment</h3>
+                    <p>High-velocity dispatch from our Texas hub, ensuring technical accuracy in every domestic shipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="contact-wrap">
+                <div>
+                    <span class="tagline">Connect</span>
+                    <h2 class="section-title">Initialize Wholesale Inquiry</h2>
+                    <p>Contact our Houston headquarters to discuss wholesale catalogs, volume pricing, or strategic trade partnerships.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Professional Email</label>
+                            <input type="email" class="form-control" placeholder="info@vicksvideogamestoys.pro">
+                        </div>
+                        <div class="form-group">
+                            <label>Distribution Brief</label>
+                            <textarea class="form-control" rows="5" placeholder="Outline your retail or wholesale objectives..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Execute Link</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Vick's Games & Toys</h2>
+                    <p>Wholesale Integrity. Houston Reliability.</p>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Headquarters:</strong> 9010 Durham Manor Ln, Houston, TX, 77075-4848 United States</p>
+                    <p><strong>Primary Inquiries:</strong> info@vicksvideogamestoys.pro</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Vick's Video Games & Toys LLC. All Rights Reserved. Principal: Victor Cornejo.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
